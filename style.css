@@ -30,7 +30,7 @@
 
         /* Header */
         header{
-            padding: 20px 50px;
+            padding: 20px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -89,7 +89,7 @@
         }
 
         .hero h1 {
-            font-size: 4.3rem;
+            font-size: 4.5rem;
             font-weight: bold;
             margin-top:2.5rem;
             line-height: 1.1;
@@ -158,6 +158,7 @@
         .btn-primary {
             background-color: #64ff47;
             color: #001f10;
+            
             text-align: center;
         }
                 
@@ -220,14 +221,23 @@
     transform: translateY(0);
 }
         .about-container{
-            margin-top: 10rem;
+            margin-top: 20rem;
+
         }
-     
+        .about-content{
+            
+            border-bottom:3px solid #22c55e;
+            border-right:3px solid #22c55e;
+            border-bottom-right-radius: 15px;
+         
+        }
         .about-main{
-            padding: 100px 50px;
+            padding: 100px 35px;
             margin: 0 auto;
             position: relative;
            display: flex;
+           flex: 1;
+           text-align: center;
             opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
@@ -258,7 +268,7 @@
 }    
       
         .section p, .about-main p, .about-main ul, .section ul li{
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             line-height: 1.8;
             font-family: 'VAGRounded1';
             opacity: 0.9;
@@ -271,15 +281,14 @@
         
         .features-content,
     .features-content p{
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             line-height: 1.9;
             font-family: 'VAGRounded1';
             opacity: 0.9;
             width: 90%;
             margin: 0 auto;
-           
-
 }
+
 .another{
     width: 100%;
     opacity: 0;
@@ -485,7 +494,15 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-          
+          *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+          }
+          body{
+            max-width: 100%;
+                 overflow-x: hidden;
+          }
             nav{
                 display: none;
              
@@ -494,18 +511,26 @@
                 max-height:90vh;
             }
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.7rem;
                 width: 100%;
                 margin-top: 10%;
                 
             }
             .hero p{
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 width: 100%;
               
             }
             .about-container{
                 display: none;
+            }
+            .about-content{
+                border: none;
+                width: 100%;
+            }
+            .about-content p, .about-content ul li{
+                font-size: 1.4rem;
+                text-align: left;
             }
             .section h2{
                 font-size: 3.5rem;
@@ -529,7 +554,11 @@
     .features-content {
         width: 100%;
     }
-    
+    .features-content p, .features-content ol li{
+        font-size: 1.3rem;
+        text-align: left;
+        
+     }
     .features-content h2 {
         font-size: 3rem;
         margin-bottom: 1rem;
@@ -540,8 +569,6 @@
     .another{
         width: 100% !important;
 
-    
-  
     }
 
  
@@ -551,14 +578,16 @@
             }
             .tokenomics-page{
                 display: block;
-                text-align: center;           
+                  
             }
             .tokenomics ul{
                 list-style-type: none;
             }
-            .tokenomics p{
+            .tokenomics p, .tokenomics ul li{
                 width: 100%;
-                text-align: center;
+                font-size: 1.3rem;
+           
+                text-align: left;
             }
         
             .tokenomics-chart{
@@ -596,5 +625,11 @@
   }
   .roadmap-phase h3{
     width: 100%;
-    font-size: 3rem;
+    font-size: 2rem;
+  }
+  .roadmap-phase ul li{
+    font-size: 1.3rem;
+  }
+  .footer-text{
+    font-size: .5rem;
   }
